@@ -29,18 +29,13 @@ if [ $# -eq 1 ]; then
         && git push -u origin main \
         && echo "Push successful" \
         && branch_letters=$(echo "$branch_name" | grep -o '[a-zA-Z]*') \
-        && echo "$branch_letters" \
         && branch_number=$(echo "$branch_name" | grep -o '[0-9]*') \
-        && echo "$branch_number" \
         && new_branch_number=$((branch_number + 1)) \
-        && echo "$new_branch_number" \
         && new_branch_name="$branch_letters$new_branch_number" \
-        && echo "$new_branch_name" \
         && git checkout -b "$new_branch_name" \
         && echo "Checkout successful" \
-        && echo -e "Original branch: $branch_name\nNew branch: $new_branch_name (checked out)" \
+        && echo -e "Original branch: $branch_name\nNew branch: $new_branch_name" \
         || echo -e "\nScript unsuccessful"
-        
     else
         echo "Branch name not received from git status. Failure"
     fi
