@@ -18,8 +18,8 @@ if [ $# -eq 1 ]; then
         && git commit -m "$1" \
         && git pull origin main \
         && git push -u origin main \
-        && echo "Script successful. Please checkout a non-main branch for the future" \
-        || echo "Script unsuccessful"
+        && echo -e "\nScript successful. Please checkout a non-main branch for the future" \
+        || echo -e "\nScript unsuccessful"
     elif [ ${#branch_name} -gt 0 ]; then
         git add . \
         && git commit -m "$1" \
@@ -38,9 +38,8 @@ if [ $# -eq 1 ]; then
         && echo "$new_branch_name" \
         && git checkout -b "$new_branch_name" \
         && echo "Checkout successful" \
-        && echo "Original branch: $branch_name" \
-        && echo "New branch: $new_branch_name (checked out)" \
-        || echo "Script unsuccessful"
+        && echo -e "Original branch: $branch_name\nNew branch: $new_branch_name (checked out)" \
+        || echo -e "\nScript unsuccessful"
     else
         echo "Branch name not received from git status. Failure"
     fi
