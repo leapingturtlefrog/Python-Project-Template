@@ -15,7 +15,7 @@ docker kill container_a     : stop container named container_a
 # GITHUB
 git clone https://github.com/username/repository-name.git
 
-git checkout -b branch-name
+git checkout -b branch-name OR git checkout branch-name
 
 git add .
 git commit -m "msg"

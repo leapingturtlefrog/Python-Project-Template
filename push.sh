@@ -24,8 +24,6 @@ if [ $# -eq 1 ]; then
     else
         echo "Script unsuccessful. Current branch name was not read."
     fi
-    
 else
     echo "Please enter the commit message as a single string argument."
 fi
-
