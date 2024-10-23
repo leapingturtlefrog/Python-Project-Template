@@ -27,7 +27,7 @@ if [ $# -eq 1 ]; then
         && git pull origin main \
         && git merge "$branch_name" \
         && git push -u origin main \
-        && echo -e "Push successful" \
+        && echo -e "\nPush successful" \
         && branch_letters=$(echo "$branch_name" | grep -o '[a-zA-Z]*') \
         && branch_number=$(echo "$branch_name" | grep -o '[0-9]*') \
         && new_branch_number=$((branch_number + 1)) \
