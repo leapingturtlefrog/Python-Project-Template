@@ -1,0 +1,9 @@
+./run.sh                    : build the docker image and run a new container
+
+source ./setup.sh           : activate the virtual environment and install requirements
+                              (primarly for IDE recognition of libraries in this project)
+deactivate                  : deactivate the virtual environment
+
+docker ps -a                : list all docker containers
+docker container prune      : remove all nonactive containers
+docker kill container_a     : stop container named container_a
