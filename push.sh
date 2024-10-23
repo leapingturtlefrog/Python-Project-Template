@@ -40,6 +40,7 @@ if [ $# -eq 1 ]; then
         && echo "Checkout successful" \
         && echo -e "Original branch: $branch_name\nNew branch: $new_branch_name (checked out)" \
         || echo -e "\nScript unsuccessful"
+        
     else
         echo "Branch name not received from git status. Failure"
     fi
