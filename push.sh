@@ -11,15 +11,19 @@ if [ $# -eq 1 ]; then
     echo "$branch_name"
     branch_name=${branch_name:10}
     
-    git add . \
-    && git commit -m "$1" \
-    && git checkout main \
-    && git pull origin main \
-    && git merge $branch_name \
-    && git push -u origin main \
-    && (git checkout -b $branch_name &> /dev/null \
-            || git checkout $branch_name) \
-    && echo "Successful" || echo "Unsuccessful"
+    if [ ${#branch_name} -gt 0 ]; then
+        git add . \
+        && git commit -m "$1" \
+        && git checkout main \
+        && git pull origin main \
+        && git merge $branch_name \
+        && git push -u origin main \
+        && (git checkout -b $branch_name &> /dev/null \
+                || git checkout $branch_name) \
+        && echo "Script successful" || echo "Script unsuccessful"
+    else
+        echo "Script unsuccessful. Current branch name was not read."
+    fi
     
 else
     echo "Please enter the commit message as a single string argument."
