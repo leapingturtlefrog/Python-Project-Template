@@ -35,6 +35,7 @@ if [ $# -eq 1 ]; then
         && git checkout -b "$new_branch_name" > /dev/null \
         && echo "Checkout successful from $branch_name to $new_branch_name" \
         || echo -e "\nScript unsuccessful"
+        
     else
         echo "Branch name not received from git status. Failure"
     fi
