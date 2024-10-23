@@ -21,6 +21,7 @@ if [ $# -eq 1 ]; then
         && git push -u origin main \
         && (git checkout -b $branch_name &> /dev/null \
                 || git checkout $branch_name) \
+        && git merge main \
         && echo "Script successful" || echo "Script unsuccessful"
     else
         echo "Script unsuccessful. Current branch name was not read."
