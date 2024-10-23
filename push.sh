@@ -1,7 +1,10 @@
 # Run by entering the command './push.sh "commit message"'
 # The commit message must be a string.
 # Adds, commits, pulls, merges, pushes, and then checks out
-# the branch you started in just one command.
+# a new branch in one command.
+#
+# Likely a nano merge message screen will appear.
+# Just press ctrl + x to continue.
 #
 # Note: this script may not work if there is a merge conflict,
 # which would have to be handled separately.
@@ -11,7 +14,6 @@ if [ $# -eq 1 ]; then
     read -r branch_name <<< "$git_status"
     echo "$branch_name"
     branch_name=${branch_name:10}
-    
     
     if [ "$branch_name" = "main" ]; then
         git add . \
@@ -35,30 +37,9 @@ if [ $# -eq 1 ]; then
         && git checkout -b "$new_branch_name" > /dev/null \
         && echo "Checkout successful from $branch_name to $new_branch_name" \
         || echo -e "\nScript unsuccessful"
-        
     else
         echo "Branch name not received from git status. Failure"
     fi
-    : '
-    if [ ${#branch_name} -gt 0 ]; then
-        git add . \
-        && git commit -m "$1" \
-        && git checkout main \
-        && git pull origin main \
-        && git merge "$branch_name" \
-        && git push -u origin main \
-        # && (git checkout -b "$branch_name" &> /dev/null \
-        #        || git checkout "$branch_name") \
-        # && 
-        && echo "Script successful" || echo "Script unsuccessful"
-        
-        
-        $branch_name -eq "main" && echo "Please checkout a non-main branch for the future" \
-        || 
-    else
-        echo "Script unsuccessful. Current branch name was not read."
-    fi
-    '
 else
     echo "Please enter the commit message as a single string argument."
 fi
