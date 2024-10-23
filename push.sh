@@ -44,3 +44,4 @@ if [ $# -eq 1 ]; then
 else
     echo "Please enter the commit message as a single string argument."
 fi
+
