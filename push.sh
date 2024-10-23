@@ -12,6 +12,7 @@ if [ $# -eq 1 ]; then
     echo "$branch_name"
     branch_name=${branch_name:10}
     
+    
     if [ "$branch_name" = "main" ]; then
         git add . \
         && git commit -m "$1" \
