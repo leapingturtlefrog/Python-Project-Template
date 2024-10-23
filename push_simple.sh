@@ -19,8 +19,8 @@ branch_name=${branch_name:10}
 if [ ${#branch_name} -gt 0 ]; then
     git add . \
     && git commit -m "$1" \
-    && git checkout main \
     && git pull origin main \
+    && git checkout main \
     && git merge "$branch_name" --no-edit \
     && git push -u origin main \
     && (git checkout -b "$branch_name" &> /dev/null \

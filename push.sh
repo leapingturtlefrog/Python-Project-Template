@@ -25,8 +25,8 @@ if [ $# -eq 1 ]; then
     elif [ ${#branch_name} -gt 0 ]; then
         git add . \
         && git commit -m "$1" \
-        && git checkout main \
         && git pull origin main \
+        && git checkout main \
         && git merge "$branch_name" --no-edit \
         && git push -u origin main \
         && echo -e "\nPush successful" \
