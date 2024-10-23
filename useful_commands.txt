@@ -1,5 +1,7 @@
 # SCRIPTS
 ./run.sh                    : build the docker image and run a new container
+./push.sh "commit message"  : add, commit, pull, merge, push, and then checkout your
+                              original git branch with one command
 
 source ./setup.sh           : activate the virtual environment and install requirements
                               (primarly for IDE recognition of libraries in this project)
