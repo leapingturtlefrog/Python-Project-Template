@@ -27,7 +27,7 @@ if [ $# -eq 1 ]; then
         && git commit -m "$1" \
         && git checkout main \
         && git pull origin main \
-        && git merge "$branch_name" \
+        && git merge "$branch_name --no-edit" \
         && git push -u origin main \
         && echo -e "\nPush successful" \
         && branch_letters=$(echo "$branch_name" | grep -o '[a-zA-Z]*') \
@@ -44,6 +44,3 @@ if [ $# -eq 1 ]; then
 else
     echo "Please enter the commit message as a single string argument."
 fi
-
-#
-#
