@@ -1,9 +1,10 @@
 # Run by entering the command './push.sh "commit message"'
+# The commit message must be a string.
 # Adds, commits, pulls, merges, pushes, and then checks out
-# the branch you started on.
+# the branch you started in just one command.
 #
 # Note: this script may not work if there is a merge conflict,
-# which would then have to be handled separately.
+# which would have to be handled separately.
 
 if [ $# -eq 1 ]; then
     git_status=$(git status)
