@@ -18,7 +18,7 @@ if [ $# -eq 1 ]; then
     if [ "$branch_name" = "main" ]; then
         git add . \
         && git commit -m "$1" \
-        && git pull origin main \
+        && git pull origin main --no-edit \
         && git push -u origin main \
         && echo -e "\nScript successful. Please checkout a non-main branch for the future" \
         || echo -e "\nScript unsuccessful"
