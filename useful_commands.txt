@@ -12,7 +12,6 @@ docker kill container_a     : stop container named container_a
 
 # GITHUB
 git clone https://github.com/username/repository-name.git
-git remote add origin https://github.com/username/repository-name.git
 
 git checkout -b branch-name
 
@@ -25,4 +24,5 @@ git push -u origin main
 
 
 git remote -v               : check remote repository
-git branch                  : check current branch
+git branch OR git status    : check current branch
+git branch -d branch-name   : delete local branch
