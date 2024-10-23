@@ -10,7 +10,7 @@ if [ $# -eq 1 ]; then
     && git pull origin main \
     && git merge $branch_name \
     && git push -u origin main \
-    && git checkout -B $branch_name \
+    && (git checkout -b $branch_name || git checkout $branch_name) \
     && echo "Successful" || echo "Unsuccessful"
     
 else
