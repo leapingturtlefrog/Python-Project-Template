@@ -22,6 +22,6 @@ if [ $# -eq 1 ]; then
     && echo "Successful" || echo "Unsuccessful"
     
 else
-    echo "Please enter the commit message as a single argument."
+    echo "Please enter the commit message as a single string argument."
 fi
 
