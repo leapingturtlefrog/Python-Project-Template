@@ -12,7 +12,7 @@ if [ $# -eq 1 ]; then
     echo "$branch_name"
     branch_name=${branch_name:10}
     
-    if [ $branch_name -eq "main" ]; then
+    if [ "$branch_name" -eq "main" ]; then
         git add . \
         && git commit -m "$1" \
         && git pull origin main \
@@ -28,9 +28,13 @@ if [ $# -eq 1 ]; then
         && git push -u origin main \
         && echo "Push successful" \
         && branch_letters=$(echo "$branch_name" | grep -o '[a-zA-Z]*') \
+        && echo "$branch_letters" \
         && branch_number=$(echo "$branch_name" | grep -o '[0-9]*') \
+        && echo "$branch_number" \
         && new_branch_number=$((branch_number + 1)) \
-        && new_branch="$branch_letters$new_branch_number" \
+        && echo "$new_branch_number" \
+        && new_branch_name="$branch_letters$new_branch_number" \
+        && echo "$new_branch_name" \
         && git checkout -b "$new_branch_name" \
         && echo "Checkout successful" \
         && echo "Original branch: $branch_name" \
