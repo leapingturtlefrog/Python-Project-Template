@@ -2,8 +2,8 @@
 # Adds, commits, pulls, merges, pushes, and then checks out
 # the branch you started on.
 #
-# May not work if there is a merge conflict, which would
-# then have to be handled separately.
+# Note: this script may not work if there is a merge conflict,
+# which would then have to be handled separately.
 
 if [ $# -eq 1 ]; then
     git_status=$(git status)

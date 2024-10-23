@@ -8,6 +8,7 @@ source ./setup.sh           : activate the virtual environment and install requi
 deactivate                  : deactivate the virtual environment
 
 # DOCKER
+docker images               : list all docker images
 docker ps -a                : list all docker containers
 docker container prune      : remove all nonactive containers
 docker kill container_a     : stop container named container_a
