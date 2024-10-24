@@ -42,5 +42,5 @@ if [ $# -eq 1 ]; then
         echo "Branch name not received from git status. Failure"
     fi
 else
-    echo "Please enter the commit message as a single string argument."
+    echo "Please enter the commit message as a single string argument"
 fi

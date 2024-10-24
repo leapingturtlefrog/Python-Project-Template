@@ -27,5 +27,5 @@ if [ ${#branch_name} -gt 0 ]; then
             || git checkout "$branch_name") \
     && echo "Script successful" || echo "Script unsuccessful"
 else
-    echo "Script unsuccessful. Current branch name was not read."
+    echo "Script unsuccessful. Current branch name was not read"
 fi

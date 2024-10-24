@@ -1,5 +1,5 @@
 # Run with the command './run.sh'
-# Builds the Docker image and runs a new container
+# Builds the Docker image and runs a new container.
 
 IMAGE_NAME=image_a
 CONTAINER_NAME=container_a
