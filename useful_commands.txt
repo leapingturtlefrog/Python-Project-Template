@@ -25,7 +25,9 @@ git pull origin main
 git merge branch-name
 git push -u origin main
 
-
 git remote -v               : check remote repository
 git branch OR git status    : check current branch
 git branch -d branch-name   : delete local branch
+
+git remote set-url origin "new-remote-url"
+                            : Set new remote
