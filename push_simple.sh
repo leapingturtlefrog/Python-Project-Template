@@ -24,6 +24,7 @@ if [ ${#branch_name} -gt 0 ]; then
     && git merge "$branch_name" --no-edit \
     && git push -u origin main \
     && echo "Script successful" || echo "Script unsuccessful"
+    echo "Please change branch away from main"
 else
     echo "Script unsuccessful. Current branch name was not read"
 fi
