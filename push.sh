@@ -40,6 +40,7 @@ if [ $# -eq 1 ]; then
         && fifth_old_branch_name="$branch_letters$fifth_old_branch_number" \
         && git branch -d "$fifth_old_branch_name" \
         && echo "Fifth oldest branch ($fifth_old_branch_name) successfully deleted" \
+        || echo "Branch $fifth_old_branch_name not found and not deleted" \
         && echo "Script successful" \
         || echo -e "\nScript unsuccessful"
     else
