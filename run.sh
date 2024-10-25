@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Run with the command './run.sh'
 # Builds the Docker image and runs a new container.
 

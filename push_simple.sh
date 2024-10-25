@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Run by entering the command './push_simple.sh "commit message"'
 # The commit message must be a string.
 # Adds, commits, pulls, merges, and pushes code in just one command.
@@ -10,7 +12,6 @@
 
 branch_name=$(git branch --show-current)
 echo "$branch_name"
-branch_name=${branch_name:10}
 
 if [ ${#branch_name} -gt 0 ]; then
     git add . \

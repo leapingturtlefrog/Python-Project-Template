@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Run by entering the command './push.sh "commit message"'
 # The commit message must be a string.
 # Adds, commits, pulls, merges, pushes, checks out a new
@@ -10,7 +12,6 @@
 if [ $# -eq 1 ]; then
     branch_name=$(git branch --show-current)
     echo "$branch_name"
-    branch_name=${branch_name:10}
     
     if [ "$branch_name" = "main" ]; then
         git add . \
@@ -41,7 +42,7 @@ if [ $# -eq 1 ]; then
         && echo "Script successful" \
         || echo -e "\nScript unsuccessful"
     else
-        echo "Branch name not received from git status. Failure"
+        echo "Error: Unable to retrieve the current branch name"
     fi
 else
     echo "Please enter the commit message as a single string argument"
