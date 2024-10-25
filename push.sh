@@ -36,6 +36,10 @@ if [ $# -eq 1 ]; then
         && new_branch_name="$branch_letters$new_branch_number" \
         && git checkout -b "$new_branch_name" > /dev/null \
         && echo "Checkout successful from $branch_name to $new_branch_name" \
+        && fifth_old_branch_number=$((new_branch_number - 4)) \
+        && fifth_old_branch_name="$branch_letters$fifth_old_branch_number" \
+        && git branch -d "$branch_name" > /dev/null \
+        && echo "Fifth oldest branch ($fifth_old_branch_name) successfully deleted" \
         && echo "Script successful" \
         || echo -e "\nScript unsuccessful"
     else
