@@ -38,7 +38,7 @@ if [ $# -eq 1 ]; then
         && echo "Checkout successful from $branch_name to $new_branch_name" \
         && fifth_old_branch_number=$((new_branch_number - 5)) \
         && fifth_old_branch_name="$branch_letters$fifth_old_branch_number" \
-        && git branch -d "$fifth_old_branch_name" \
+        && git branch -d "$fifth_old_branch_name" > /dev/null \
         && echo "Fifth oldest branch ($fifth_old_branch_name) successfully deleted" \
         || echo "Branch $fifth_old_branch_name not found and not deleted" \
         && echo "Script successful" \
