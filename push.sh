@@ -36,6 +36,7 @@ if [ $# -eq 1 ]; then
         && new_branch_name="$branch_letters$new_branch_number" \
         && git checkout -b "$new_branch_name" > /dev/null \
         && echo "Checkout successful from $branch_name to $new_branch_name" \
+        && echo "$new_branch_number" \
         && fifth_old_branch_number=$((new_branch_number - 5)) \
         && fifth_old_branch_name="$branch_letters$fifth_old_branch_number" \
         && git branch -d "$branch_name" \
