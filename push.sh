@@ -34,11 +34,11 @@ if [ $# -eq 1 ]; then
         && branch_number=$(echo "$branch_name" | grep -o '[0-9]*') \
         && new_branch_number=$((branch_number + 1)) \
         && new_branch_name="$branch_letters$new_branch_number" \
-        && git checkout -b "$new_branch_name" > /dev/null \
+        && git checkout -b "$new_branch_name" &> /dev/null \
         && echo "Checkout successful from $branch_name to $new_branch_name" \
         && fifth_old_branch_number=$((new_branch_number - 5)) \
         && fifth_old_branch_name="$branch_letters$fifth_old_branch_number" \
-        && git branch -d "$fifth_old_branch_name" > /dev/null \
+        && git branch -d "$fifth_old_branch_name" &> /dev/null \
         && echo "Fifth oldest branch ($fifth_old_branch_name) successfully deleted" \
         || echo "Branch $fifth_old_branch_name not found and not deleted" \
         && echo "Script successful" \
