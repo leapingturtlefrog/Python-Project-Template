@@ -5,5 +5,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY app/ ./app
 EXPOSE 8501
 HEALTHCHECK CMD curl --fail http://localhost:8501/_stcore/health
-ENTRYPOINT ["streamlit", "run", "app/main.py", "--server.address=0.0.0.0"]
-#CMD ["python", "app/main.py"]
+ENTRYPOINT ["streamlit", "run", "app.py", "--server.address=0.0.0.0"]
