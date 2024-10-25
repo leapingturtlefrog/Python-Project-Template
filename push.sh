@@ -1,10 +1,8 @@
 # Run by entering the command './push.sh "commit message"'
 # The commit message must be a string.
-# Adds, commits, pulls, merges, pushes, and then checks out
-# a new branch in one command.
-#
-# Likely a nano merge message screen will appear.
-# Just press ctrl + x to continue.
+# Adds, commits, pulls, merges, pushes, checks out a new
+# branch, and then deletes the fifth oldest branch
+# in one command.
 #
 # Note: this script may not work if there is a merge conflict,
 # which would have to be handled separately.

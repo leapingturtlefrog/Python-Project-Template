@@ -1,12 +1,9 @@
 # Run by entering the command './push_simple.sh "commit message"'
 # The commit message must be a string.
 # Adds, commits, pulls, merges, and pushes code in just one command.
-# NOTE: It does not checkout a new branch, unlike 'push.sh'
 #
-# Likely a nano merge message screen will appear.
-# Just press ctrl + x to continue.
-#
-# A more simple and slightly less automated version of 'push.sh'
+# Note on differences: This does not checkout a new branch or
+# maintain only 5 local branches, unlike 'push.sh'
 #
 # Note: this script may not work if there is a merge conflict,
 # which would have to be handled separately.
