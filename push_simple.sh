@@ -8,8 +8,7 @@
 # Note: this script may not work if there is a merge conflict,
 # which would have to be handled separately.
 
-git_status=$(git status)
-read -r branch_name <<< "$git_status"
+branch_name=$(git branch --show-current)
 echo "$branch_name"
 branch_name=${branch_name:10}
 
@@ -21,7 +20,7 @@ if [ ${#branch_name} -gt 0 ]; then
     && git merge "$branch_name" --no-edit \
     && git push -u origin main \
     && echo "Script successful" || echo "Script unsuccessful"
-    echo "Please change branch away from main"
+    echo "Please change to non-main branch"
 else
     echo "Script unsuccessful. Current branch name was not read"
 fi
