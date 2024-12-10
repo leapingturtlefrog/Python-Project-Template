@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Optionally run this file with the command 'source ./setup.sh'
 # to create and activate a venv for IDE recognition
 

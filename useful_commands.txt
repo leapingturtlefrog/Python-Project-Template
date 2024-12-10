@@ -8,7 +8,7 @@
                               or get rid of old branches
 
 source ./setup.sh           : activate the virtual environment and install requirements
-                              (primarly for IDE recognition of libraries in this project)
+                              (primarily for IDE recognition of libraries in this project)
 deactivate                  : deactivate the virtual environment
 
 # DOCKER
@@ -16,6 +16,7 @@ docker images               : list all docker images
 docker ps -a                : list all docker containers
 docker container prune      : remove all nonactive containers
 docker kill container_a     : stop container named container_a
+docker system prune -a       : remove all stopped containers, images, networks, etc
 
 # GITHUB
 git clone https://github.com/username/repository-name.git
